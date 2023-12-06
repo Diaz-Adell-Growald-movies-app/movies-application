@@ -22,7 +22,16 @@
     <div class="main row">
         <form name="movieForm">
             <label for="rating-select">Ratings</label>
-            <select name="rating-select" id="rating-select"></select>
+            <select name="rating-select" id="rating-select">
+                <ul class="rating-selections">
+                    <option class="rate-movie">Choose a Rating</option>
+                    <option class="rate-movie">1</option>
+                    <option class="rate-movie">2</option>
+                    <option class="rate-movie">3</option>
+                    <option class="rate-movie">4</option>
+                    <option class="rate-movie">5</option>
+                </ul>
+            </select>
             <label for="movie-title">Add A Movie:</label>
             <input type="text" id="movie-title">
             <label for="edit-movie">Edit Current Movie:</label>
@@ -35,6 +44,6 @@
         </form>
     </div>
 </main>
-        <script src="js/movies.js"></script>
+<script src="js/movies.js"></script>
 </body>
 </html>
