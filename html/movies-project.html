@@ -5,6 +5,36 @@
     <title>Title</title>
 </head>
 <body>
-
+<header class="container">
+    <div class="row">
+        <div class="column">
+            <div class="nav-bar">
+                <div class="logo"><h1>LOGO HERE</h1></div>
+                <div class="loading">LOADING...</div>
+                <div><input class="text-box search-input" type="text" value="" placeholder="search" id="search-input">
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="container">
+    <div class="main row">
+        <form name="movieForm">
+            <label for="rating-select">Ratings</label>
+            <select name="rating-select" id="rating-select"></select>
+            <label for="movie-title">Add A Movie:</label>
+            <input type="text" id="movie-title">
+            <label for="edit-movie">Edit Current Movie:</label>
+            <input type="text" id="edit-movie">
+            <label for="edit-genre"> Genre:</label>
+            <input type="text" id="edit-genre">
+            <label for="delete-movie">Delete a Movie:</label>
+            <input type="text" id="delete-movie">
+            <button>Submit Edit</button>
+        </form>
+    </div>
+</main>
+        <script src="js/movies.js"></script>
 </body>
 </html>
