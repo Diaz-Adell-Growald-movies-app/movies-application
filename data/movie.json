@@ -1,0 +1,118 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Shrek",
+      "rating": 5,
+      "genre": "comedy",
+    },
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Rush Hour",
+      "genre": "Action",
+      "rating": "5"
+    },
+    {
+      "id": 3,
+      "title": "This is the End",
+      "genre": "Comedy",
+      "rating": "4"
+    },
+    {
+      "id": 4,
+      "title": "Starship Trpoopers",
+      "genre": "Action",
+      "rating": "2"
+    },
+    {
+      "id": 5,
+      "title": "Bullet Train",
+      "genre": "Action",
+      "rating": "4"
+    },
+    {
+      "id": 6,
+      "title": "Doom",
+      "genre": "Action",
+      "rating": "2"
+    },
+    {
+      "id": 7,
+      "title": "47 Ronin",
+      "genre": "Action",
+      "rating": "4"
+    },
+    {
+      "id": 8,
+      "title": "The Italian Job",
+      "genre": "Action",
+      "rating": "3"
+    },
+    {
+      "id": 10,
+      "title": "The Highwaymen",
+      "genre": "Crime",
+      "rating": "3"
+    },
+    {
+      "id": 11,
+      "title": "The Irishman",
+      "genre": "Crime",
+      "rating": "4"
+    },
+    {
+      "id": 12,
+      "title": "Reservoir Dogs",
+      "genre": "Thriller",
+      "rating": "4"
+    },
+    {
+      "title": "Ted",
+      "genre": "Comedy",
+      "id": 14,
+      "rating": "3"
+    },
+    {
+      "title": "Blazing Saddles",
+      "genre": "comedy",
+      "rating": "",
+      "id": 18
+    },
+    {
+      "title": "The Room",
+      "genre": "comedy",
+      "rating": "",
+      "id": 19
+    },
+    {
+      "title": "Scream",
+      "genre": "thriller",
+      "rating": "",
+      "id": 20
+    },
+    {
+      "title": "Ong Bak",
+      "genre": "Action",
+      "rating": "",
+      "id": 21
+    }
+  ]
+}
+  ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
