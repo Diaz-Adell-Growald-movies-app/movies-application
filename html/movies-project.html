@@ -1,50 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Imugi Flicks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
-<header class="container">
-    <div class="row">
-        <div class="column">
-            <div class="nav-bar">
-                <div class="logo"><h1>IMUGI FLICKS </h1></div>
-                <div class="loading">LOADING...</div>
-                <div><input class="text-box search-input" type="text" value="" placeholder="search" id="search-input">
-                </div>
-                <div></div>
+<div class="page-wrapper m-2">
+    <div class="container header-container justify-center">
+        <div class="row d-flex align-center justify-space-evenly">
+            <div class="main-header">Movies DB</div>
+            <div class="input-wrapper">
+                <input placeholder="Search Movies">
             </div>
+            <button id="search-btn">Find</button>
         </div>
     </div>
-</header>
-<main class="container">
-    <div class="main row">
-        <form name="movieForm">
-            <label for="rating-select">Ratings</label>
-            <select name="rating-select" id="rating-select">
-                <ul class="rating-selections">
-                    <option class="rate-movie">Choose a Rating</option>
-                    <option class="rate-movie">1</option>
-                    <option class="rate-movie">2</option>
-                    <option class="rate-movie">3</option>
-                    <option class="rate-movie">4</option>
-                    <option class="rate-movie">5</option>
-                </ul>
-            </select>
-            <label for="movie-title">Add A Movie:</label>
-            <input type="text" id="movie-title">
-            <label for="edit-movie">Edit Current Movie:</label>
-            <input type="text" id="edit-movie">
-            <label for="edit-genre"> Genre:</label>
-            <input type="text" id="edit-genre">
-            <label for="delete-movie">Delete a Movie:</label>
-            <input type="text" id="delete-movie">
-            <button>Submit Edit</button>
-        </form>
-    </div>
-</main>
+    <aside class="body-container d-flex justify-space-evenly">
+        <div class="relative h-32 w-32 ...">
+            <div class="favorite-movies">Favorite Movies</div>
+            <div class="savedMoviesContainer"></div>
+        </div>
+        <div class="row card-bodies gap-5 ">
+        </div>
+    </aside>
+</div>
 <script src="https://kit.fontawesome.com/b958af02bf.js" crossorigin="anonymous"></script>
-<script src="js/movies.js"></script>
+<script src="js/keys.js"></script>
+<script src="../js/movies.js"></script>
 </body>
 </html>
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Imugi Flicks</title>-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<header class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="column">-->
+<!--            <div class="nav-bar">-->
+<!--                <div class="logo"><h1>IMUGI FLICKS </h1></div>-->
+<!--                <div class="loading">LOADING...</div>-->
+<!--                <div><input class="text-box search-input" type="text" value="" placeholder="search" id="search-input">-->
+<!--                </div>-->
+<!--                <div></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</header>-->
+<!--<main class="container">-->
+<!--    <div class="main row">-->
+<!--        <form name="movieForm">-->
+<!--            <label for="rating-select">Ratings</label>-->
+<!--            <select name="rating-select" id="rating-select">-->
+<!--                <ul class="rating-selections">-->
+<!--                    <option class="rate-movie">Choose a Rating</option>-->
+<!--                    <option class="rate-movie">1</option>-->
+<!--                    <option class="rate-movie">2</option>-->
+<!--                    <option class="rate-movie">3</option>-->
+<!--                    <option class="rate-movie">4</option>-->
+<!--                    <option class="rate-movie">5</option>-->
+<!--                </ul>-->
+<!--            </select>-->
+<!--            <label for="movie-title">Add A Movie:</label>-->
+<!--            <input type="text" id="movie-title">-->
+<!--            <label for="edit-movie">Edit Current Movie:</label>-->
+<!--            <input type="text" id="edit-movie">-->
+<!--            <label for="edit-genre"> Genre:</label>-->
+<!--            <input type="text" id="edit-genre">-->
+<!--            <label for="delete-movie">Delete a Movie:</label>-->
+<!--            <input type="text" id="delete-movie">-->
+<!--            <button>Submit Edit</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</main>-->
+<!--<script src="../js/keys.js"></script>-->
+<!--<script src="https://kit.fontawesome.com/b958af02bf.js" crossorigin="anonymous"></script>-->
+<!--<script src="../js/movies.js"></script>-->
+<!--</body>-->
+<!--</html>-->
