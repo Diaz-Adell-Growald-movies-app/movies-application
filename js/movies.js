@@ -1,4 +1,9 @@
+
 // Function to fetch all movies from the server
+
+import {MOVIES_KEY} from "./keys.js";
+
+
 const getAllMovies = async () => {
     try {
         let url = 'http://localhost:3000/movies';

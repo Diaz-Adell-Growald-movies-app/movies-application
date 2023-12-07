@@ -9,8 +9,7 @@
     {
       "id": 2,
       "title": "The Matrix",
-      "genre": "Action",
-      "rating": "5"
+      "desc": null
     },
     {
       "id": 3,
@@ -93,8 +92,7 @@
     {
       "id": 17,
       "title": "The Room",
-      "genre": "comedy",
-      "rating": "3"
+      "desc": null
     },
     {
       "id": 18,
