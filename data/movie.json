@@ -3,14 +3,12 @@
     {
       "id": 1,
       "title": "Shrek",
-      "rating": 5,
-      "genre": "comedy",
+      "genre": "Action",
+      "rating": "5"
     },
-{
-  "movies": [
     {
-      "id": 1,
-      "title": "Rush Hour",
+      "id": 2,
+      "title": "The Matrix",
       "genre": "Action",
       "rating": "5"
     },
@@ -69,50 +67,40 @@
       "rating": "4"
     },
     {
+      "id": 13,
+      "title": "Rush Hour",
+      "genre": "Action",
+      "rating": "5"
+    },
+    {
+      "id": 14,
       "title": "Ted",
       "genre": "Comedy",
-      "id": 14,
       "rating": "3"
     },
     {
-      "title": "Blazing Saddles",
-      "genre": "comedy",
-      "rating": "",
-      "id": 18
-    },
-    {
-      "title": "The Room",
-      "genre": "comedy",
-      "rating": "",
-      "id": 19
-    },
-    {
+      "id": 15,
       "title": "Scream",
       "genre": "thriller",
-      "rating": "",
-      "id": 20
+      "rating": "3"
     },
     {
+      "id": 16,
       "title": "Ong Bak",
       "genre": "Action",
-      "rating": "",
-      "id": 21
+      "rating": "3"
+    },
+    {
+      "id": 17,
+      "title": "The Room",
+      "genre": "comedy",
+      "rating": "3"
+    },
+    {
+      "id": 18,
+      "title": "Blazing Saddles",
+      "genre": "comedy",
+      "rating": "3"
     }
   ]
 }
-  ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
