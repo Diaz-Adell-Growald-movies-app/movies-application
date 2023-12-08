@@ -1,8 +1,8 @@
 // uiFunctions
 
-import { getMovies } from './movieFunctions.js';
+// import { getMovies } from './movieFunctions.js';
 
-export function renderAllMovieCards(movies) {
+function renderAllMovieCards(movies) {
     const movieCardsContainer = document.querySelector('.movie-cards');
 
     // Clear existing content
@@ -25,15 +25,15 @@ export function renderAllMovieCards(movies) {
         movieCardsContainer.appendChild(movieCard);
     });
 }
-
-export function renderSearchedMovies(movies) {
-    // Implementation
-}
-
-export function renderEditForm(card) {
-    // Implementation
-}
-
-export function renderFavorites(favoritesList) {
-    // Implementation
-}
+//
+// export function renderSearchedMovies(movies) {
+//     // Implementation
+// }
+//
+// export function renderEditForm(card) {
+//     // Implementation
+// }
+//
+// export function renderFavorites(favoritesList) {
+//     // Implementation
+// }

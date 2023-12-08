@@ -1,7 +1,7 @@
 // movieFunctions.js
 
-import { fetchMovies, addMovie, deleteMovie, updateMovie } from '../js/index.js';
-import { renderAllMovieCards, renderSearchedMovies, renderEditForm, renderFavorites } from './ui-functions';
+// import { fetchMovies, addMovie, deleteMovie, updateMovie } from '../js/index.js';
+// import { renderAllMovieCards, renderSearchedMovies, renderEditForm, renderFavorites } from './ui-functions';
 
 
 // Placeholder functions for missing imports
