@@ -1,21 +1,21 @@
 // movieFunctions.js
 
-import { fetchMovies, addMovie, deleteMovie, updateMovie } from 'data/movie-db.json';
-import { renderAllMovieCards, renderSearchedMovies, renderEditForm, renderFavorites } from 'js/ui-functions.js';
+import { fetchMovies, addMovie, deleteMovie, updateMovie } from '../js/index.js';
+import { renderAllMovieCards, renderSearchedMovies, renderEditForm, renderFavorites } from './ui-functions';
 
 
 // Placeholder functions for missing imports
-export function renderSearchedMovies(movies) {
-    // Implementation
-}
+// export function renderSearchedMovies(movies) {
+//     // Implementation
+// }
 
-export function renderEditForm(card) {
-    // Implementation
-}
-
-export function renderFavorites(favoritesList) {
-    // Implementation
-}
+// export function renderEditForm(card) {
+//     // Implementation
+// }
+//
+// export function renderFavorites(favoritesList) {
+//     // Implementation
+// }
 
 
 export async function getMovies() {

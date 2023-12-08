@@ -59,7 +59,3 @@ function createMovieCard(movie) {
 
 
 
-<script type="module" src="js/main.js"></script>
-<script type="module" src="js/ui-functions.js"></script>
-<script type="module" src="js/movieFunctions.js"></script>
-<script type="module" src="js/moviesApi.js"></script>

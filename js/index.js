@@ -1,3 +1,7 @@
+
+import {MOVIES_KEY} from "../.idea/keys.js";
+
+
 const getAllMovies = async () => {
     try {
         let url = 'http://localhost:3000/movies';
