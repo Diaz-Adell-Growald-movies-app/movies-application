@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MOVIES!</title>
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/movie-app.css">
+
+</head>
+<body>
+<div class="page-wrapper m-2">
+  <div class="container header-container justify-center">
+    <div class="row d-flex align-center justify-space-evenly">
+      <div class="main-header">Movies DB</div>
+      <div class="input-wrapper">
+        <input placeholder="Search Movies">
+      </div>
+      <button id="search-btn">Find</button>
+    </div>
+  </div>
+  <aside class="body-container d-flex justify-space-evenly">
+    <div class="relative h-32 w-32 ...">
+      <div class="favorite-movies">Favorite Movies</div>
+      <div class="savedMoviesContainer"></div>
+    </div>
+    <div class="row card-bodies gap-5 ">
+    </div>
+  </aside>
+</div>
+
+<script src="js/keys.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
