@@ -1,8 +1,8 @@
 
 // Function to fetch all movies from the server
 
-import {MOVIES_KEY, TMBD_API_TOKEN} from "../.idea/keys.js";
-
+import {MOVIES_KEY} from "../.idea/keys.js";
+import {TMBD_API_TOKEN} from "../.idea/keys.js";
 
 const getAllMovies = async () => {
     try {
