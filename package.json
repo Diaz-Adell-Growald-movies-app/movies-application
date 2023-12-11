@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "db": "json-server -d1200 --watch data/movie.json",
+    "db": "json-server -d5000 --watch data/movie.json",
     "build:css": "postcss ./css/movie-style.css -o ./output.css"
   },
   "name": "movies-application",

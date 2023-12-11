@@ -1,16 +1,9 @@
-// movie-app.js
-// import express from 'express';
-// import cors from 'cors';
-// const app = express();
-//
-// // Enable CORS
-// app.use(cors());
-//
-// app.listen(3000, () => {
-//     console.log('Server is running on port 3000');
-// });
+
+
+
 
 let loaderAnim = document.querySelector('.loading');
+
 
 // Functions to talk to the Database
 async function getMovies() {
@@ -72,68 +65,36 @@ export async function updateMovie(movieObject) {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
-            }, body: JSON.stringify(movie)
+            }, body: JSON.stringify(movieObject)
         };
-        const response = await fetch(`${url}/${movie.id}`, options);
+        const response = await fetch(`${url}/${movieObject.id}`, options);
         return response.json();
     } catch (error) {
         console.log(error.message);
     }
 };
 
+export const getMoviePosters = async () => {
+    try {
+        const options = {
+            method: 'GET',
+            headers: {
+                'accept': 'application/json',
+                'Authorization': `Bearer ${MOVIES_KEY}`
+            }
+        };
+        const response = await fetch('https://api.themoviedb.org/3/movie/movie_id/images', options)
+
+        const data = await response.json();
+        return data;
+
+    } catch (err) {
+        console.error(err);
+    }
+};
+console.log(getMoviePosters());
+
+
 // Exporting getMovies function
 export { getMovies };
 
-// // WHERE THE MAGIC HAPPENS
-// (async () => {
-//     // VARIABLES AND QUERIES
-//     // variables
-//     let movies = await getMovies();
-//     // queries
-//     const movieCards = document.querySelector(".movie-cards");
-//     const searchInput = document.querySelector("#search-input");
-//     const sideMenu = document.querySelector(".column.side-menu");
-//     const submitMovieTitleTextBox = document.querySelector("#submit-movie-title");
-//     const submitMovieGenre = document.querySelector("#submit-movie-genre");
-//     const submitMovieBtn = document.querySelector("#submit-movie-btn");
-//     let allMovieCards;
-//     const movieCard = document.querySelector('.movie-cards');
-//     let editForm;
-//     let favoritesList = [];
-//     let favoritesListDiv = document.querySelector('.favorites-list');
-//     const menuFavoritesLink = document.querySelector('#menu-favorites');
-//
-//     // FUNCTIONS
-//     function renderAllMovieCards() {
-//         movieCards.innerHTML = "";
-//         movies.forEach((movie) => {
-//             const starRating = "&starf;".repeat(parseInt(movie.rating) || 0);
-//             const movieCardHTML = `
-//             <div class="movie-card">
-//                 <div class="movie-card-rating">${starRating}</div>
-//                 <h4 class="movie-card-title">${movie.title}</h4>
-//                 <p class="movie-card-genre">${movie.genre}</p>
-//                 <div class="card-mod">
-//                     <span class="edit-movie">EDIT</span>
-//                     <span class="add-fav">+</span>
-//                     <span class="delete-movie">X</span>
-//                 </div>
-//             </div>`;
-//             movieCards.innerHTML += movieCardHTML;
-//         });
-//     }
-
-    // other functions...
-
-    // EVENTS
-    // searchInput.addEventListener('keyup', (event) => {
-    //     searchMovies(searchInput.value);
-    // })
-
-    // other event listeners...
-
-// RUN ON LOAD
-//     movies = await getMovies(); // Remove the 'let' to avoid re-declaration
-//     console.log(movies);
-//     renderAllMovieCards();
-// })();

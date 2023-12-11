@@ -26,6 +26,7 @@ import {addMovieToDatabase, updateMovie} from "./db-api.js";
         document.querySelector('#rating').value = movieObject.rating;
         document.querySelector('#genre').value = movieObject.genre;
         document.querySelector('#summary').value = movieObject.summary;
+        document.querySelector('#hidden-id').value = movieObject.id;
     }
 
 // Add Movie to Jason Server
@@ -57,8 +58,9 @@ import {addMovieToDatabase, updateMovie} from "./db-api.js";
         let rating = document.querySelector('#rating').value;
         let genre = document.querySelector('#genre').value;
         let summary = document.querySelector('#summary').value;
+        let id = document.querySelector('#hidden-id').value;
         let changeMovie = {
-            title: title, genre: genre, rating: rating, summary: summary,
+            id:id, title: title, genre: genre, rating: rating, summary: summary,
         }
 
         await updateMovie(changeMovie);
@@ -81,21 +83,7 @@ import {addMovieToDatabase, updateMovie} from "./db-api.js";
         }
     };
 
-    const getTopAPIMovies = async () => {
-        try {
-            let url = 'https://api.themoviedb.org/3/movie/popular/?api_key=';
-            const options = {
-                method: 'GET', headers: {
-                    'Content-Type': 'application/json',
-                }
-            }
 
-            const response = await fetch(`${url}${MOVIES_KEY}`, options);
-            return await response.json();
-        } catch (error) {
-            console.log(error.message);
-        }
-    };
 
     const searchMoviesAPI = async (movieName) => {
         try {
@@ -114,10 +102,6 @@ import {addMovieToDatabase, updateMovie} from "./db-api.js";
 
     }
 
-    let initialMovies = await getTopAPIMovies();
-    // function deleteById(id) {
-    //     alert(id);
-    // }
 
     async function renderJsons() {
         let allJsonMovies = await getAllMovies();
@@ -148,6 +132,8 @@ import {addMovieToDatabase, updateMovie} from "./db-api.js";
             });
             card.appendChild(editButton);
 
+
+
             return card;
         });
 
@@ -156,60 +142,22 @@ import {addMovieToDatabase, updateMovie} from "./db-api.js";
         });
     }
 
-//             card.innerHTML = `
-//       <div class="column thisCard">
-//               <p class="card__title">${movie.title}</p>
-//              <p class="card__description">${movie.desc}</p>
-//              <br>
-//              <div class=" row gap-5">
-//
-//              <form>
-//              <input type="hidden" value="${movie.id}">
-//               <button  onclick="deleteById(${movie.id})" type="button" class="remove-btn" class="w-20 h-7 bg-orange-300 tracking-widest
-// rounded-md text-amber-700 text-md shadow-2xl hover:scale-90 ease-in duration-300
-// hover:text-base hover:font-semibold hover:rounded-lg">
-//                   Remove
-//                 </button>
-//                 </form>
-//
-//                 <form>
-//                 <input type="hidden" value="${movie.id}">
-//                 <button type="button" class="edit-btn" class="w-20 h-7 bg-orange-300 tracking-widest
-// rounded-md text-amber-700 text-md shadow-2xl hover:scale-90 ease-in duration-300
-// hover:text-base hover:font-semibold hover:rounded-lg">
-//                     Edit
-//                 </button>
-//                 </form>
-// </div>
-//                 <br>
-//            </div>
-//        </div>`;
+// loading animation
+    document.addEventListener('DOMContentLoaded', async function () {
+        // Display "loading..." message initially
+        const loadingElement = document.getElementById('loadingElement');
+        try {
+            // Simulating an AJAX request with a delay
+            await new Promise(resolve => setTimeout(resolve, 5000));
+            // Remove the "loading..." element
+            loadingElement.style.display = 'none';
+            // Your other logic here after the AJAX request comes back
+            console.log('AJAX request completed');
+        } catch (error) {
+            console.error('Error:', error.message);
+        }
+    });
 
-
-    //
-    // document.querySelectorAll('.remove-btn').forEach(function (button) {
-    //     button.addEventListener('click', async function (e) {
-    //         alert('remove');
-    //         e.preventDefault()
-    //         console.log(e);
-    //         console.log (e.parentNode);
-    //         let id = button.parentNode.querySelector('input').value;
-    //         alert(id);
-    //         await removeMovie(id);
-    //         renderJsons();
-    //     })
-    // })
-    //
-    //
-    // document.querySelectorAll('.edit-btn').forEach(function (button) {
-    //     button.addEventListener('click', async function (e) {
-    //         e.preventDefault()
-    //         let id = button.parentNode.querySelector('input').value;
-    //         alert(id);
-    //         await updateMovie(id);
-    //         renderJsons();
-    //     })
-    // })
 
 
     const movieContainer = document.getElementById('savedMoviesContainer');
@@ -239,109 +187,9 @@ import {addMovieToDatabase, updateMovie} from "./db-api.js";
     }
 
 
-    function createMovieCard(movie) {
-        const movieCard = document.createElement('div');
-        movieCard.className = 'movie-card';
-
-        const titleElement = document.createElement('h4');
-        titleElement.textContent = movie.title;
-        movieCard.appendChild(titleElement);
-
-        const genreElement = document.createElement('p');
-        genreElement.textContent = movie.genre;
-        movieCard.appendChild(genreElement);
-
-        const ratingElement = document.createElement('p');
-        genreElement.textContent = movie.rating;
-        movieCard.appendChild(genreElement);
-
-        const summaryElement = document.createElement('p');
-        genreElement.textContent = movie.summary;
-        movieCard.appendChild(genreElement);
-
-        // Add more elements as needed for your movie card structure
-
-        return movieCard;
-    }
-
-//
-//     const movieCard = initialMovies.results.map(movie => {
-//         let card = document.createElement('div');
-//
-//         card.innerHTML = `
-//       <div class="card column">
-//           <img src="https://image.tmdb.org/t/p/original/${movie.poster_path}" style=" height: 500px; width: 250px" alt="poster picture">
-//           <div class="card__content">
-//               <p class="card__title">${movie.title}</p>
-//              <p class="card__description">${movie.overview}</p>
-//              <br>
-//               <button class="w-40 h-10 bg-orange-300 tracking-widest
-// rounded-md text-amber-600 text-md shadow-2xl hover:scale-90 ease-in duration-300
-// hover:text-base hover:font-semibold hover:rounded-lg">
-//                     Favorite
-//                 </button>
-//            </div>
-//        </div>`;
-//         card.querySelector('button').addEventListener('click', async () => {
-//             let newMovie = {
-//                 id: movie.id,
-//                 title: movie.title,
-//                 desc: movie.overview,
-//             }
-//             await addMovie(newMovie);
-//             renderJsons();
-//         })
-//         return card;
-//     });
-//
-//     // Append each card to the DOM.
-//     movieCard.forEach(card => {
-//         movieContainer.appendChild(card);
-//     });
 
 
-    //search function
-//     document.querySelector('#search-btn').addEventListener('click', async () => {
-//         movieContainer.innerHTML = '';
-//         const searchValue = document.querySelector('input').value;
-//         let searchedMovie = await searchMoviesAPI(searchValue);
-//
-//         const movieCard = searchedMovie.results.map(movie => {
-//             let card = document.createElement('div');
-//
-//             card.innerHTML = `
-//       <div class="card column" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-//           <img src="https://image.tmdb.org/t/p/original/${movie.poster_path}" style=" height: 500px; width: 250px" alt="poster picture">
-//           <div class="card__content">
-//               <p class="card__title">${movie.title}</p>
-//              <p class="card__description">${movie.overview}</p>
-//              <br>
-//               <button class="w-40 h-10 bg-orange-300 tracking-widest
-// rounded-md text-amber-600 text-md shadow-2xl hover:scale-90 ease-in duration-300
-// hover:text-base hover:font-semibold hover:rounded-lg">
-//                     Favorite
-//                 </button>
-//            </div>
-//        </div>`;
-//             card.querySelector('button').addEventListener('click', async () => {
-//                 let newMovie = {
-//                     id: movie.id,
-//                     title: movie.title,
-//                     desc: movie.overview,
-//                 }
-//                 await addMovie(newMovie);
-//                 renderJsons();
-//             })
-//             return card;
-//         });
-//
-//         // Append each card to the DOM.
-//         movieCard.forEach(card => {
-//             movieContainer.appendChild(card);
-//         });
-//
-//
-//     })
+
     await renderJsons()
 
 })()

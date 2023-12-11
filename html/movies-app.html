@@ -15,6 +15,14 @@
 
 </head>
 <body>
+<!--    LOADING ANIMATION-->
+<div class="eye-lid" id="loadingElement">
+    <div class="eye">
+        <div class="cornea">
+            <div class="white-pupil"></div>
+        </div>
+    </div>
+</div>
 <div class="page-wrapper m-2">
     <div class="container header-container justify-center">
         <div class="row d-flex align-center justify-space-evenly">
@@ -42,8 +50,13 @@
                 <button id="add-btn">Add Movie</button>
 
                 <button id="save-btn">Save Changes</button>
+
+                <input id='hidden-id' type="hidden">
             </form>
         </div>
+
+
+
 
         <aside class="body-container d-flex justify-space-evenly">
             <div class="relative h-32 w-32 ...">
@@ -54,6 +67,7 @@
             </div>
         </aside>
     </div>
+
 
 
     <script type="module" src="../js/index.js"></script>

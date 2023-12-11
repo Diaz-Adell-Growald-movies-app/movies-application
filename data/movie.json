@@ -4,82 +4,71 @@
       "id": 3,
       "title": "This is the End",
       "genre": "Comedy",
-      "rating": "4"
+      "rating": "3",
+      "summary": "Apocalyptic comedy about a group of actors facing the end of the world while attending a party."
     },
     {
       "id": 7,
       "title": "47 Ronin",
       "genre": "Action",
-      "rating": "4"
+      "rating": "4",
+      "summary": "A group of samurai seeks vengeance against a treacherous warlord."
     },
     {
       "id": 8,
       "title": "The Italian Job",
       "genre": "Action",
-      "rating": "3"
+      "rating": "3",
+      "summary": "A team of thieves plans a heist to steal gold from a former associate who betrayed them."
     },
     {
       "id": 10,
       "title": "The Highwaymen",
       "genre": "Crime",
-      "rating": "3"
+      "rating": "3",
+      "summary": "Based on the true story of two lawmen who track down notorious criminals Bonnie and Clyde."
     },
     {
       "id": 11,
       "title": "The Irishman",
       "genre": "Crime",
-      "rating": "4"
+      "rating": "4",
+      "summary": "A mob hitman reflects on his career and involvement with the Bufalino crime family."
     },
     {
       "id": 12,
       "title": "Reservoir Dogs",
       "genre": "Thriller",
-      "rating": "4"
+      "rating": "4",
+      "summary": "A group of criminals suspects a police informant among them during a heist."
     },
     {
       "id": 13,
       "title": "Rush Hour",
       "genre": "Action",
-      "rating": "5"
+      "rating": "5",
+      "summary": "A Hong Kong police officer teams up with a fast-talking LAPD detective to rescue a diplomat's kidnapped daughter."
     },
     {
       "id": 14,
       "title": "Ted",
       "genre": "Comedy",
-      "rating": "3"
+      "rating": "3",
+      "summary": "A man's childhood teddy bear comes to life and continues to be his best friend in adulthood."
     },
     {
       "id": 15,
       "title": "Scream",
-      "genre": "thriller",
-      "rating": "3"
+      "genre": "Thriller",
+      "rating": "3",
+      "summary": "A masked killer terrorizes a small town, targeting high school students."
     },
     {
       "id": 18,
       "title": "Blazing Saddles",
-      "genre": "comedy",
-      "rating": "3"
-    },
-    {
-      "title": "goofy movie",
-      "genre": "",
-      "rating": "",
-      "summary": "",
-      "id": 19
-    },
-    {
-      "title": "goofy movie",
-      "genre": "",
-      "rating": "",
-      "summary": "",
-      "id": 20
-    },
-    {
-      "title": "goofy movie",
-      "genre": "",
-      "rating": "",
-      "summary": "",
-      "id": 21
+      "genre": "Comedy",
+      "rating": "3",
+      "summary": "A comedy spoofing the Western film genre, set in a fictional Old West town."
     }
   ]
 }
