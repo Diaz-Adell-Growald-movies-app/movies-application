@@ -1,9 +1,20 @@
 
-
-
-
 let loaderAnim = document.querySelector('.loading');
 
+//moviesApi.js
+const apiUrl = 'http://localhost:3000/movies';
+
+// api.js
+async function fetchMovies() {
+    try {
+        const response = await fetch(apiUrl); // Replace with your local JSON file path
+        const movies = await response.json();
+        return movies;
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
+}
 
 // Functions to talk to the Database
 async function getMovies() {
@@ -43,19 +54,6 @@ export async function addMovieToDatabase(movieObject) {
     }
 }
 
-async function deleteMovie(id) {
-    loaderAnim.style.display = 'flex';
-    const url = `http://localhost:3000/movies/${id}`
-    const options = {
-        method: 'DELETE'
-    }
-    fetch(url, options)
-        .then(response => {
-            loaderAnim.style.display = 'none';
-            console.log(`deleted`)
-        })
-        .catch(error => console.error(error));
-}
 
 
 export async function updateMovie(movieObject) {
@@ -74,27 +72,27 @@ export async function updateMovie(movieObject) {
     }
 };
 
-export const getMoviePosters = async () => {
+export async function deleteMovie(id) {
     try {
-        const options = {
-            method: 'GET',
-            headers: {
-                'accept': 'application/json',
-                'Authorization': `Bearer ${MOVIES_KEY}`
-            }
-        };
-        const response = await fetch('https://api.themoviedb.org/3/movie/movie_id/images', options)
+        // Prompt the user to confirm deletion
+        const confirmDelete = confirm('Are you sure you want to delete this movie?');
 
-        const data = await response.json();
-        return data;
-
-    } catch (err) {
-        console.error(err);
+        if (confirmDelete) {
+            // If user confirms, proceed with deletion
+            let url = `http://localhost:3000/movies/`;
+            const options = {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+            const response = await fetch(`${url}/${id}`, options);
+            return response.json();
+        }
+    } catch (error) {
+        console.log(error.message);
     }
 };
-console.log(getMoviePosters());
 
 
-// Exporting getMovies function
-export { getMovies };
 

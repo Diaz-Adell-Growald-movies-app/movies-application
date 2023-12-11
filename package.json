@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "db": "json-server -d5000 --watch data/movie.json",
-    "build:css": "postcss ./css/movie-style.css -o ./output.css"
+    "db": "json-server -d2200 --watch data/movie.json",
+    "build:css": "postcss ./css/movie-style.css -o css/output.css"
   },
   "name": "movies-application",
   "version": "1.0.0",

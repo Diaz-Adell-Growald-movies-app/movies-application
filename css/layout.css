@@ -1,165 +1,88 @@
-/*
-    The "page wrapper" is the outermost container for the page. It mimics
-    the behavior of the body tag, but is a div so that it can be styled
-    with more flexibility than the body tag.
-*/
+
+label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select{
+    display: block;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #1F1F1F;
+    background-color: #1F1F1F;
+    color: #fff;
+}
+
 .page-wrapper {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
 }
 
-/*
-    The "container", sometimes referred to as a "section", is a container
-    element (semantic when applicable) that vertically separates different
-    areas on the page based on their purpose or topic. It can allow different
-    background colors and properties for each section that help users associate
-    content within it as belonging to the same subject.
-*/
-.container {
+#savedMoviesContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/* Combo classes to extend the container's versatility */
-.container.grow {
-    flex: 1 0 0;
-}
-.container.justify-center {
-    justify-content: center;
-}
-.container.justify-end {
-    justify-content: end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 8px;
 }
 
-/*
-    The "row" is a container element that horizontally separates its
-    children, which are usually columns. It also performs a secondary role
-    of keeping the content of the site within a reasonable width, so that
-    wider screens don't disrupt the intended layout.
-*/
-.row {
-    display: flex;
+
+.movie-card {
+    border: 2px solid red;
+    width: calc(25vw - 32px);
+    margin: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #1F1F1F; /* Adjust background color as needed */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: scale(1.05); /* Increase size on hover */
+}
+.card__rating {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #EF4444; /* Adjust background color as needed */
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.movie-card .card__description {
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+
+.remove-btn:hover,
+.edit-btn:hover {
+    background-color: #EF4444; /* Darker red on hover */
+}
+
+/*Loading Animation Overlay*/
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 1100px;
-    padding: 0 20px;
-}
-/* Combo classes to extend the row's versatility */
-.row.full-width {
-    max-width: unset;
-}
-.row.align-center {
-    align-items: center;
-}
-.row.align-top {
-    align-items: start;
-}
-.row.align-bottom {
-    align-items: end;
-}
-.row.justify-end {
-    justify-content: end;
-}
-.row.justify-space-between {
-    justify-content: space-between;
-}
-.row.no-padding {
-    padding: unset;
-}
-.row.grow {
-    flex: 1 0 0;
-}
-
-/*
-    The "column" is a container element that vertically separates its
-    children, which are usually content elements. When paired with sibling columns,
-    it allows for the creation of a flexible grid system that can be used
-    to create a variety of layouts.
-*/
-.column {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
-    flex-direction: column;
-    flex: 1 0 0;
-}
-/* Combo classes to extend the column's versatility */
-.column.shrink {
-    flex: 0 1 auto;
-}
-.column.align-center {
     align-items: center;
-}
-.column.align-end {
-    align-items: end;
-}
-.column.justify-center {
     justify-content: center;
-}
-.column.justify-end {
-    justify-content: end;
-}
-.column.justify-space-between {
-    justify-content: space-between;
+    z-index: 1000;
 }
 
-/*
-    Flexbox utilities
-*/
-.d-flex {
-    display: flex;
-}
-.d-flex.flex-column {
-    flex-direction: column;
-}
-.d-flex.justify-center {
-    justify-content: center;
-}
-.d-flex.justify-end {
-    justify-content: end;
-}
-.d-flex.justify-space-between {
-    justify-content: space-between;
-}
-.d-flex.justify-space-evenly {
-    justify-content: space-evenly;
-}
-.d-flex.justify-space-around {
-    justify-content: space-around;
-}
-.d-flex.align-center {
-    align-items: center;
-}
-.d-flex.align-end {
-    align-items: end;
-}
-.d-flex.align-self-stretch {
-    align-self: stretch;
-}
-.d-flex.full-width {
-    width: 100%;
-}
-
-
-/*
-    Misc. utility classes
-*/
-.gap-5 {
-    gap: 5px;
-}
-.gap-10 {
-    gap: 10px;
-}
-.gap-15 {
-    gap: 15px;
-}
-.gap-20 {
-    gap: 20px;
-}
-.gap-25 {
-    gap: 25px;
-}
-.gap-30 {
-    gap: 30px;
-}
 
 /*LOADING ANIMATION*/
 .eye-lid {

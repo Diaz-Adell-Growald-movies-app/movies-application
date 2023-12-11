@@ -4,7 +4,7 @@
       "id": 3,
       "title": "This is the End",
       "genre": "Comedy",
-      "rating": "3",
+      "rating": "4",
       "summary": "Apocalyptic comedy about a group of actors facing the end of the world while attending a party."
     },
     {
@@ -16,7 +16,7 @@
     },
     {
       "id": 8,
-      "title": "The Italian Job",
+      "title": "The Italian Work",
       "genre": "Action",
       "rating": "3",
       "summary": "A team of thieves plans a heist to steal gold from a former associate who betrayed them."
